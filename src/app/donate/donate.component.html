@@ -1,0 +1,8 @@
+<div class="donate-container">
+  <h2>Make a Donation</h2>
+  <form [formGroup]="donationForm" (ngSubmit)="onSubmit()">
+    <input formControlName="name" placeholder="Your Name" required>
+    <input type="number" formControlName="amount" placeholder="Donation Amount" min="5" required>
+    <button type="submit" [disabled]="!donationForm.valid">Donate</button>
+  </form>
+</div>
